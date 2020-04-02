@@ -1,0 +1,433 @@
+root@QWERTY:~/dev/private/SAMP/bugs/compilation (v13.11.0) (master) strace ./build.sh 
+execve("./build.sh", ["./build.sh"], [/* 34 vars */]) = 0
+brk(NULL)                               = 0x235a000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=103656, ...}) = 0
+mmap(NULL, 103656, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f604fbc1000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f604fbc0000
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f604f5ec000
+mprotect(0x7f604f7ac000, 2097152, PROT_NONE) = 0
+mmap(0x7f604f9ac000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f604f9ac000
+mmap(0x7f604f9b2000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f604f9b2000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f604fbbf000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f604fbbe000
+arch_prctl(ARCH_SET_FS, 0x7f604fbbf700) = 0
+mprotect(0x7f604f9ac000, 16384, PROT_READ) = 0
+mprotect(0x606000, 4096, PROT_READ)     = 0
+mprotect(0x7f604fbdb000, 4096, PROT_READ) = 0
+munmap(0x7f604fbc1000, 103656)          = 0
+brk(NULL)                               = 0x235a000
+brk(0x237b000)                          = 0x237b000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1668976, ...}) = 0
+mmap(NULL, 1668976, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f604fa26000
+close(3)                                = 0
+execve("/root/.vscode-server/bin/0ba0ca52957102ca3527cf479571617f0de6ed50/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/c/Users/Test/.cargo/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/c/Users/Test/AppData/Roaming/Python/Python37/Scripts/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/root/.nvm/versions/node/v13.11.0/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/local/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/local/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = 0
+brk(NULL)                               = 0x26e3000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=103656, ...}) = 0
+mmap(NULL, 103656, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbf1801f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libtinfo.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\310\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=167240, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbf1801e000
+mmap(NULL, 2264256, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbf17beb000
+mprotect(0x7fbf17c10000, 2093056, PROT_NONE) = 0
+mmap(0x7fbf17e0f000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7fbf17e0f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14608, ...}) = 0
+mmap(NULL, 2109680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbf179e7000
+mprotect(0x7fbf179ea000, 2093056, PROT_NONE) = 0
+mmap(0x7fbf17be9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fbf17be9000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbf1761d000
+mprotect(0x7fbf177dd000, 2097152, PROT_NONE) = 0
+mmap(0x7fbf179dd000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7fbf179dd000
+mmap(0x7fbf179e3000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbf179e3000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbf1801d000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbf1801c000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbf1801b000
+arch_prctl(ARCH_SET_FS, 0x7fbf1801c700) = 0
+mprotect(0x7fbf179dd000, 16384, PROT_READ) = 0
+mprotect(0x7fbf17be9000, 4096, PROT_READ) = 0
+mprotect(0x7fbf17e0f000, 16384, PROT_READ) = 0
+mprotect(0x6f3000, 4096, PROT_READ)     = 0
+mprotect(0x7fbf18039000, 4096, PROT_READ) = 0
+munmap(0x7fbf1801f000, 103656)          = 0
+open("/dev/tty", O_RDWR|O_NONBLOCK)     = 3
+close(3)                                = 0
+brk(NULL)                               = 0x26e3000
+brk(0x26e4000)                          = 0x26e4000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1668976, ...}) = 0
+mmap(NULL, 1668976, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbf17e83000
+close(3)                                = 0
+brk(0x26e5000)                          = 0x26e5000
+brk(0x26e6000)                          = 0x26e6000
+getuid()                                = 0
+getgid()                                = 0
+geteuid()                               = 0
+getegid()                               = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+brk(0x26e7000)                          = 0x26e7000
+sysinfo({uptime=89268, loads=[6080, 3296, 352], totalram=13235154944, freeram=9822457856, sharedram=196608, bufferram=109649920, totalswap=4294967296, freeswap=4294967296, procs=410, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+brk(0x26e8000)                          = 0x26e8000
+rt_sigaction(SIGCHLD, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7fbf176524b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGCHLD, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7fbf176524b0}, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGQUIT, {SIG_IGN, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, 8) = 0
+uname({sysname="Linux", nodename="QWERTY", ...}) = 0
+brk(0x26e9000)                          = 0x26e9000
+brk(0x26ea000)                          = 0x26ea000
+brk(0x26eb000)                          = 0x26eb000
+brk(0x26ec000)                          = 0x26ec000
+brk(0x26ed000)                          = 0x26ed000
+stat("/root/dev/private/SAMP/bugs/compilation", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+getpid()                                = 26481
+open("/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=26258, ...}) = 0
+mmap(NULL, 26258, PROT_READ, MAP_SHARED, 3, 0) = 0x7fbf18032000
+close(3)                                = 0
+brk(0x26ee000)                          = 0x26ee000
+getppid()                               = 26479
+stat(".", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+stat("/root/.vscode-server/bin/0ba0ca52957102ca3527cf479571617f0de6ed50/bin/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/c/Users/Test/.cargo/bin/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/c/Users/Test/AppData/Roaming/Python/Python37/Scripts/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/root/.nvm/versions/node/v13.11.0/bin/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/sbin/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/bash", 0x7ffe6adbf5f0) = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/bash", 0x7ffe6adbf5f0)  = -1 ENOENT (No such file or directory)
+stat("/usr/bin/bash", 0x7ffe6adbf5f0)   = -1 ENOENT (No such file or directory)
+stat("/sbin/bash", 0x7ffe6adbf5f0)      = -1 ENOENT (No such file or directory)
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", X_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", R_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", X_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", R_OK)               = 0
+brk(0x26ef000)                          = 0x26ef000
+brk(0x26f0000)                          = 0x26f0000
+getpgrp()                               = 26479
+rt_sigaction(SIGCHLD, {0x447b10, [], SA_RESTORER|SA_RESTART, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7fbf176524b0}, 8) = 0
+getrlimit(RLIMIT_NPROC, {rlim_cur=50469, rlim_max=50469}) = 0
+brk(0x26f1000)                          = 0x26f1000
+brk(0x26f2000)                          = 0x26f2000
+brk(0x26f3000)                          = 0x26f3000
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+open("./build.sh", O_RDONLY)            = 3
+ioctl(3, TCGETS, 0x7ffe6adbf8f0)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "#!/usr/bin/env bash\n\nLD_LIBRARY_"..., 80) = 80
+lseek(3, 0, SEEK_SET)                   = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024*1024, rlim_max=1024*1024}) = 0
+fcntl(255, F_GETFD)                     = -1 EBADF (Bad file descriptor)
+dup2(3, 255)                            = 255
+close(3)                                = 0
+fcntl(255, F_SETFD, FD_CLOEXEC)         = 0
+fcntl(255, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(255, {st_mode=S_IFREG|0777, st_size=513, ...}) = 0
+lseek(255, 0, SEEK_CUR)                 = 0
+brk(0x26f4000)                          = 0x26f4000
+read(255, "#!/usr/bin/env bash\n\nLD_LIBRARY_"..., 513) = 513
+read(255, "", 513)                      = 0
+brk(0x26f5000)                          = 0x26f5000
+brk(0x26f6000)                          = 0x26f6000
+brk(0x26f7000)                          = 0x26f7000
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, 513, SEEK_CUR)               = 1026
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fbf1801c9d0) = 26482
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {0x4449f0, [], SA_RESTORER, 0x7fbf176524b0}, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, 8) = 0
+wait4(-1, Pawn compiler 3.10.9                  Copyright (c) 1997-2006, ITB CompuPhase
+
+Header size:            176 bytes
+Code size:              116 bytes
+Data size:               88 bytes
+Stack/heap size:      16384 bytes; estimated max. usage=11 cells (44 bytes)
+Total requirements:   16764 bytes
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 26482
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7fbf176524b0}, {0x4449f0, [], SA_RESTORER, 0x7fbf176524b0}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=26482, si_uid=0, si_status=0, si_utime=2, si_stime=1} ---
+wait4(-1, 0x7ffe6adbf0d0, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+read(255, "", 513)                      = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+root@QWERTY:~/dev/private/SAMP/bugs/compilation (v13.11.0) (master) strace ./build.sh 
+execve("./build.sh", ["./build.sh"], [/* 34 vars */]) = 0
+brk(NULL)                               = 0x122e000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=103656, ...}) = 0
+mmap(NULL, 103656, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb433824000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb433823000
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb43324f000
+mprotect(0x7fb43340f000, 2097152, PROT_NONE) = 0
+mmap(0x7fb43360f000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7fb43360f000
+mmap(0x7fb433615000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb433615000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb433822000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb433821000
+arch_prctl(ARCH_SET_FS, 0x7fb433822700) = 0
+mprotect(0x7fb43360f000, 16384, PROT_READ) = 0
+mprotect(0x606000, 4096, PROT_READ)     = 0
+mprotect(0x7fb43383e000, 4096, PROT_READ) = 0
+munmap(0x7fb433824000, 103656)          = 0
+brk(NULL)                               = 0x122e000
+brk(0x124f000)                          = 0x124f000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1668976, ...}) = 0
+mmap(NULL, 1668976, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb433689000
+close(3)                                = 0
+execve("/root/.vscode-server/bin/0ba0ca52957102ca3527cf479571617f0de6ed50/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/c/Users/Test/.cargo/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/c/Users/Test/AppData/Roaming/Python/Python37/Scripts/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/root/.nvm/versions/node/v13.11.0/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/local/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/local/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/usr/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/sbin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = -1 ENOENT (No such file or directory)
+execve("/bin/bash", ["bash", "./build.sh"], [/* 34 vars */]) = 0
+brk(NULL)                               = 0x1859000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=103656, ...}) = 0
+mmap(NULL, 103656, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f280dfcf000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libtinfo.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\310\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=167240, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f280dfce000
+mmap(NULL, 2264256, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f280db9b000
+mprotect(0x7f280dbc0000, 2093056, PROT_NONE) = 0
+mmap(0x7f280ddbf000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7f280ddbf000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14608, ...}) = 0
+mmap(NULL, 2109680, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f280d997000
+mprotect(0x7f280d99a000, 2093056, PROT_NONE) = 0
+mmap(0x7f280db99000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f280db99000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f280d5cd000
+mprotect(0x7f280d78d000, 2097152, PROT_NONE) = 0
+mmap(0x7f280d98d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f280d98d000
+mmap(0x7f280d993000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f280d993000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f280dfcd000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f280dfcc000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f280dfcb000
+arch_prctl(ARCH_SET_FS, 0x7f280dfcc700) = 0
+mprotect(0x7f280d98d000, 16384, PROT_READ) = 0
+mprotect(0x7f280db99000, 4096, PROT_READ) = 0
+mprotect(0x7f280ddbf000, 16384, PROT_READ) = 0
+mprotect(0x6f3000, 4096, PROT_READ)     = 0
+mprotect(0x7f280dfe9000, 4096, PROT_READ) = 0
+munmap(0x7f280dfcf000, 103656)          = 0
+open("/dev/tty", O_RDWR|O_NONBLOCK)     = 3
+close(3)                                = 0
+brk(NULL)                               = 0x1859000
+brk(0x185a000)                          = 0x185a000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1668976, ...}) = 0
+mmap(NULL, 1668976, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f280de33000
+close(3)                                = 0
+brk(0x185b000)                          = 0x185b000
+brk(0x185c000)                          = 0x185c000
+getuid()                                = 0
+getgid()                                = 0
+geteuid()                               = 0
+getegid()                               = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+brk(0x185d000)                          = 0x185d000
+sysinfo({uptime=89269, loads=[6080, 3296, 352], totalram=13235154944, freeram=9822756864, sharedram=196608, bufferram=109649920, totalswap=4294967296, freeswap=4294967296, procs=410, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+brk(0x185e000)                          = 0x185e000
+rt_sigaction(SIGCHLD, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7f280d6024b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGCHLD, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7f280d6024b0}, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGQUIT, {SIG_IGN, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, 8) = 0
+uname({sysname="Linux", nodename="QWERTY", ...}) = 0
+brk(0x185f000)                          = 0x185f000
+brk(0x1860000)                          = 0x1860000
+brk(0x1861000)                          = 0x1861000
+brk(0x1862000)                          = 0x1862000
+brk(0x1863000)                          = 0x1863000
+stat("/root/dev/private/SAMP/bugs/compilation", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+getpid()                                = 26488
+open("/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=26258, ...}) = 0
+mmap(NULL, 26258, PROT_READ, MAP_SHARED, 3, 0) = 0x7f280dfe2000
+close(3)                                = 0
+brk(0x1864000)                          = 0x1864000
+getppid()                               = 26486
+stat(".", {st_mode=S_IFDIR|0777, st_size=4096, ...}) = 0
+stat("/root/.vscode-server/bin/0ba0ca52957102ca3527cf479571617f0de6ed50/bin/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/c/Users/Test/.cargo/bin/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/c/Users/Test/AppData/Roaming/Python/Python37/Scripts/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/root/.nvm/versions/node/v13.11.0/bin/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/usr/local/sbin/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/bash", 0x7fffb45e3950) = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/bash", 0x7fffb45e3950)  = -1 ENOENT (No such file or directory)
+stat("/usr/bin/bash", 0x7fffb45e3950)   = -1 ENOENT (No such file or directory)
+stat("/sbin/bash", 0x7fffb45e3950)      = -1 ENOENT (No such file or directory)
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", X_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", R_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", X_OK)               = 0
+stat("/bin/bash", {st_mode=S_IFREG|0755, st_size=1037528, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/bin/bash", R_OK)               = 0
+brk(0x1865000)                          = 0x1865000
+brk(0x1866000)                          = 0x1866000
+getpgrp()                               = 26486
+rt_sigaction(SIGCHLD, {0x447b10, [], SA_RESTORER|SA_RESTART, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER|SA_RESTART, 0x7f280d6024b0}, 8) = 0
+getrlimit(RLIMIT_NPROC, {rlim_cur=50469, rlim_max=50469}) = 0
+brk(0x1867000)                          = 0x1867000
+brk(0x1868000)                          = 0x1868000
+brk(0x1869000)                          = 0x1869000
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+open("./build.sh", O_RDONLY)            = 3
+ioctl(3, TCGETS, 0x7fffb45e3c50)        = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "#!/usr/bin/env bash\n\nLD_LIBRARY_"..., 80) = 80
+lseek(3, 0, SEEK_SET)                   = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024*1024, rlim_max=1024*1024}) = 0
+fcntl(255, F_GETFD)                     = -1 EBADF (Bad file descriptor)
+dup2(3, 255)                            = 255
+close(3)                                = 0
+fcntl(255, F_SETFD, FD_CLOEXEC)         = 0
+fcntl(255, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(255, {st_mode=S_IFREG|0777, st_size=513, ...}) = 0
+lseek(255, 0, SEEK_CUR)                 = 0
+brk(0x186a000)                          = 0x186a000
+read(255, "#!/usr/bin/env bash\n\nLD_LIBRARY_"..., 513) = 513
+read(255, "", 513)                      = 0
+brk(0x186b000)                          = 0x186b000
+brk(0x186c000)                          = 0x186c000
+brk(0x186d000)                          = 0x186d000
+rt_sigprocmask(SIG_BLOCK, [INT CHLD], [], 8) = 0
+lseek(255, 513, SEEK_CUR)               = 1026
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f280dfcc9d0) = 26489
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {0x4449f0, [], SA_RESTORER, 0x7f280d6024b0}, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, 8) = 0
+wait4(-1, Pawn compiler 3.10.9                  Copyright (c) 1997-2006, ITB CompuPhase
+
+/root/dev/private/SAMP/bugs/compilation/gamemodes/test.pwn(1) : fatal error 100: cannot read from file: "a_samp"
+
+Compilation aborted.
+
+
+1 Error.
+[{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 26489
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER, 0x7f280d6024b0}, {0x4449f0, [], SA_RESTORER, 0x7f280d6024b0}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=26489, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+wait4(-1, 0x7fffb45e3450, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+read(255, "", 513)                      = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
