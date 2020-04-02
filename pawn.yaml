@@ -1,0 +1,8 @@
+dependencymeta:
+  site: ""
+  user: Misiur
+  repo: CompilationBug
+entry: gamemodes/test.pwn
+output: gamemodes/test.amx
+dependencies:
+- sampctl/samp-stdlib
